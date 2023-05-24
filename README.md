@@ -23,7 +23,7 @@ Adicione 3 ou mais screenshots do projeto em funcionamento.
 5. Divirta-se!.
  
 ## Instalação 
-**Linguagem**: Javascript <br>
+**Linguagem**:Python <br>
 
 
 
