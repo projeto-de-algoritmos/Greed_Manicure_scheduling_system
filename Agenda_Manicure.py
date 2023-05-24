@@ -8,6 +8,7 @@ def agendar_servicos(clientes):
     for cliente in clientes:
         inicio = cliente[0]
         fim = cliente[1]
+        servico = cliente[3]
 
         if inicio >= horario_disponivel:
             # Agendar o cliente
@@ -25,11 +26,13 @@ for i in range(num_clientes):
     nome = input(f"Digite o nome do cliente {i+1}: ")
     inicio = int(input(f"Digite o horário de início do serviço para o cliente {nome} (em horas): "))
     fim = int(input(f"Digite o horário de término do serviço para o cliente {nome} (em horas): "))
+    servico = input (f"Digite o serviço desejado: ")
 
-    clientes.append((inicio, fim, nome))
+
+    clientes.append((inicio, fim, nome, servico))
 
 agenda = agendar_servicos(clientes)
 
 print("Agendamento Final:")
 for cliente in agenda:
-    print(f"Nome: {cliente[2]}, Início: {cliente[0]}h, Término: {cliente[1]}h")5
+    print(f"Nome: {cliente[2]}, Início: {cliente[0]}h, Término: {cliente[1]}h - Serviço: {cliente[3]}")
