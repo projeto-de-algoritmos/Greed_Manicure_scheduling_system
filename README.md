@@ -10,7 +10,7 @@
 |20/2046283| Millena de Abreu Queiroz
 
 ## Sobre 
-O Sistema de Agendamento para Manicure utiliza o algoritmo de Scheduling to Minimize Lateness para otimizar o agendamento de serviços de manicure, levando em consideração a minimização do atraso nos horários de atendimento. 
+O Sistema de Agendamento para Manicure utiliza o algoritmo de Interval Scheduling para otimizar o máximo de agendamento de serviços de manicure no dia.
 
 ## Screenshots
 Adicione 3 ou mais screenshots do projeto em funcionamento.
