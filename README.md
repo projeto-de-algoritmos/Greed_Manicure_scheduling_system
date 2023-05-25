@@ -1,7 +1,7 @@
 # Manicure scheduling system
 
 **Número da Lista**: 5<br>
-**Conteúdo da Disciplina**: Greed / Scheduling to Minimize Lateness<br>
+**Conteúdo da Disciplina**: Greed / Interval Scheduling <br>
 
 ## Alunos
 |Matrícula | Aluno |
