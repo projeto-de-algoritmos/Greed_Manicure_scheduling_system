@@ -13,10 +13,23 @@ def agendar_servicos():
             nome = entry_nomes[i].get()
             inicio = int(entry_horarios_inicio[i].get())
             fim = int(entry_horarios_fim[i].get())
-            clientes.append(( nome, inicio, fim))
+            clientes.append((inicio, fim, nome))
         
         agenda = sorted(clientes, key=lambda x: x[1])
 
+        # Agendamento dos serviços usando o algoritmo de Interval Scheduling
+        horario_disponivel = 0
+        agendados = []
+        
+        for cliente in agenda:
+            inicio = cliente[0]
+            fim = cliente[1]
+            
+            if inicio >= horario_disponivel:
+                # Agendar o cliente
+                agendados.append(cliente)
+                horario_disponivel = fim
+        
         janela_de_agendados = tk.Toplevel(root)
         janela_de_agendados.title("Agendamento Final")
         janela_de_agendados.geometry("400x500")
@@ -31,10 +44,10 @@ def agendar_servicos():
         label_titulo.pack(pady=10)
 
         # Exibir os dados dos clientes agendados
-        for i, cliente in enumerate(agenda):
-            nome = cliente[0]
-            inicio = cliente[1]
-            fim = cliente[2]
+        for i, cliente in enumerate(agendados):
+            nome = cliente[2]
+            inicio = cliente[0]
+            fim = cliente[1]
 
             subtitulo = tk.Label(frame_agenda, text=f"Cliente {i+1}", font=("Helvetica", 14, "bold"), bg="#ffc1cc", padx=50, pady=13)
             subtitulo.pack(pady=5)
