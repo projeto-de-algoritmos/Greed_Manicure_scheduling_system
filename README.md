@@ -33,6 +33,7 @@ O Sistema de Agendamento para Manicure utiliza o algoritmo de Interval Schedulin
 **Linguagem**:Python <br>
 - sudo apt-get install python3-tk
 - pip install customtkinter
+- pip install tkinter
 
 
 
