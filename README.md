@@ -24,7 +24,8 @@ Adicione 3 ou mais screenshots do projeto em funcionamento.
  
 ## Instalação 
 **Linguagem**:Python <br>
-
+- sudo apt-get install python3-tk
+- pip install customtkinter
 
 
 
