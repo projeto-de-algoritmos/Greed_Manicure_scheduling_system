@@ -18,9 +18,13 @@ Adicione 3 ou mais screenshots do projeto em funcionamento.
 ## Uso 
 1. Clone este repositório em sua máquina local.
 2. Abra o terminal e navegue até a pasta do projeto.
-3. Abra o arquivo 'index.html' em um navegador.
-4. Escolha um nível de dificuldade.
-5. Divirta-se!.
+3. Instale as bibliotecas necessárias (vide tópico "Instalação")
+4. Execute o aplicativo app.py com o Run Python File
+5. Insira a quantidade de clientes
+6. Clique em criar campos
+7. Insira as informações solicitadas
+8. Clique em Agendar
+9. Veja a lista de agendamentos
  
 ## Instalação 
 **Linguagem**:Python <br>
