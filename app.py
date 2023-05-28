@@ -16,15 +16,35 @@ def agendar_servicos():
             clientes.append(( nome, inicio, fim))
         
         agenda = sorted(clientes, key=lambda x: x[1])
-        
-        messagebox.showinfo("Agendamento Final", str(agenda))
+
+        janela_de_agendados = tk.Toplevel(root)
+        janela_de_agendados.title("Agendamento Final")
+        janela_de_agendados.geometry("400x300")
+        janela_de_agendados.configure(bg="white")
+
+        # Frame para exibir os dados
+        frame_agenda = tk.Frame(janela_de_agendados, bg="white")
+        frame_agenda.pack(padx=20, pady=20)
+
+        # Rótulo de título
+        label_titulo = tk.Label(frame_agenda, text="Agendamento Final", font=("Helvetica", 16, "bold"))
+        label_titulo.pack(pady=10)
+
+        # Exibir os dados dos clientes agendados
+        for cliente in agenda:
+            nome = cliente[0]
+            inicio = cliente[1]
+            fim = cliente[2]
+
+            label_cliente = tk.Label(frame_agenda, text=f"Cliente: {nome}\nInício: {inicio} horas \nTérmino: {fim} horas", font=("Helvetica", 12))
+            label_cliente.pack(pady=5)
         
     except ValueError:
         messagebox.showerror("Erro", "Digite valores válidos para os horários.")
 
 
 
-customtkinter.set_appearance_mode("Light")  # Modes: system (default), light, dark
+customtkinter.set_appearance_mode("Light") 
 
 root = customtkinter.CTk()
 root.geometry("1000x700")
