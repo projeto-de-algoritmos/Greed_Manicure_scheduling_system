@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import messagebox
 import customtkinter
 
+
 def agendar_servicos():
     clientes = []
     
@@ -21,10 +22,13 @@ def agendar_servicos():
     except ValueError:
         messagebox.showerror("Erro", "Digite valores válidos para os horários.")
 
+
+
+customtkinter.set_appearance_mode("Light")  # Modes: system (default), light, dark
+
 root = customtkinter.CTk()
 root.geometry("1000x700")
 root.title("Sistema de Agendamento de Manicure")
-
 
 # Frame para os campos de entrada
 frame_inputs = customtkinter.CTkFrame(root)
@@ -33,10 +37,10 @@ frame_inputs.pack(padx=20, pady=20, expand=True, fill="both", anchor="center")
 
 # # Campo de entrada para o número de clientes
 label_num_clientes = customtkinter.CTkLabel(frame_inputs, text="Número de clientes:")
-label_num_clientes.grid(row=0, column=0, sticky="e")
+label_num_clientes.grid(row=0, column=0, sticky="e", padx=10, pady=10)
 
 entry_num_clientes = customtkinter.CTkEntry(frame_inputs)
-entry_num_clientes.grid(row=0, column=1, padx=5, pady=5)
+entry_num_clientes.grid(row=0, column=1, padx=10, pady=10)
 
 # # Campos de entrada para nome, horário de início e horário de término de cada cliente
 entry_nomes = []
@@ -69,11 +73,11 @@ def criar_campos_entrada():
         entry_horarios_fim.append(entry_fim)
 
 # Botão para criar os campos de entrada
-btn_criar_campos = customtkinter.CTkButton(frame_inputs, text="Criar campos", command=criar_campos_entrada)
+btn_criar_campos = customtkinter.CTkButton(frame_inputs, text="CRIAR CAMPOS", command=criar_campos_entrada, fg_color="#ffc1cc", hover_color="#fdf3ec", text_color="#494444", font=("Gilroy", 14))
 btn_criar_campos.grid(row=0, column=2, columnspan=2, padx=5, pady=5)
 
 # Botão para agendar os serviços
-btn_agendar = customtkinter.CTkButton(root, text="Agendar", command=agendar_servicos)
+btn_agendar = customtkinter.CTkButton(root, text="AGENDAR", command=agendar_servicos, fg_color="#ffc1cc", hover_color="#fdf3ec", text_color="#494444", font=("Gilroy", 14))
 btn_agendar.pack(pady=10)
 
 # Execução da janela principal
